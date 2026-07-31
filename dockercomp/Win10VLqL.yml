@@ -2,6 +2,7 @@ services:
   ubuntu:
     image: lscr.io/linuxserver/webtop:ubuntu-xfce
     container_name: ubuntu
+    shm_size: '2gb'    # <-- DODAJ TĘ LINIJKĘ
     environment:
       - PUID=1000
       - PGID=1000
