@@ -1,16 +1,11 @@
 services:
   ubuntu:
-    image: dockurr/ubuntu
+    image: lscr.io/linuxserver/webtop:ubuntu-xfce
     container_name: ubuntu
     environment:
-      RAM_SIZE: "4G"
-      CPU_CORES: "4"
-      DISK_SIZE: "20G"
-    devices:
-      - /dev/kvm
-      - /dev/net/tun
-    cap_add:
-      - NET_ADMIN
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Warsaw
     ports:
-      - 8006:8006
-    stop_grace_period: 2m
+      - 3000:3000
+    restart: unless-stopped
