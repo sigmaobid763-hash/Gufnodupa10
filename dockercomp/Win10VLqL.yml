@@ -1,12 +1,11 @@
 services:
-  linux:
-    image: dockurr/vm
+  ubuntu:
+    image: dockurr/ubuntu
     container_name: ubuntu
     environment:
-      VERSION: "ubuntu"  # Możesz też wpisać "arch", "fedora", "debian"
       RAM_SIZE: "4G"
       CPU_CORES: "4"
-      DISK_SIZE: "36G"
+      DISK_SIZE: "20G"
     devices:
       - /dev/kvm
       - /dev/net/tun
